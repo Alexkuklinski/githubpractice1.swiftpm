@@ -2,7 +2,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State var textSize = 100.00
+    @State var name = ""
+    @State var update = "Alex"
     var body: some View {
+        Text("\(update)")
+        TextField("Enter Name", text: $name)
+        Button{
+           update = name
+        }label: {
+            Text("update")
         VStack {
             Text("Calliope")
                 .frame(width: textSize, height: textSize/2)
