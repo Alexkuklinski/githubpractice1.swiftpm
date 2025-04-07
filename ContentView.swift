@@ -1,12 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name = ""
+    @State var update = "Alex"
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Text("\(update)")
+        TextField("Enter Name", text: $name)
+        Button{
+           update = name
+        }label: {
+            Text("update")
         }
     }
 }
