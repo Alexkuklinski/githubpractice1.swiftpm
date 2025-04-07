@@ -10,6 +10,8 @@ struct ContentView: View {
            update = name
         }label: {
             Text("update")
+        VStack {
+            Text("Calliope")
         }
     }
 }
